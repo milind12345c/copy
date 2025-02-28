@@ -30,33 +30,26 @@
 
         pre code {
             font-size: 16px;
+            display: block;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
     </style>
     <script>
         function copyCode(id) {
             var code = document.getElementById(id).innerText;
-            navigator.clipboard.writeText(code).then(() => {
-                // alert("Code copied!");
-            });
+            navigator.clipboard.writeText(code);
         }
     </script>
 </head>
 
 <body>
 
-    <?php
-
-    function createCodeBox($title, $code, $id)
-    {
-        echo "<div class='code-box'>";
-        echo "<h3>$title</h3>";
-        echo "<button class='copy-btn' onclick='copyCode(\"$id\")'>Copy</button>";
-        echo "<pre><code id='$id'>" . htmlspecialchars($code) . "</code></pre>";
-        echo "</div>";
-    }
-
-    // 1. PHP Script to check Prime Number
-    createCodeBox("1. Prime Number Check", 'function isPrime($num) {
+    <div class='code-box'>
+        <h3>1. Prime Number Check</h3>
+        <button class='copy-btn' onclick='copyCode("code1")'>Copy</button>
+        <pre><code id='code1'>&lt;?php
+function isPrime($num) {
     if ($num < 2) return false;
     for ($i = 2; $i * $i <= $num; $i++) {
         if ($num % $i == 0) return false;
@@ -64,18 +57,28 @@
     return true;
 }
 $num = 17;
-echo isPrime($num) ? "$num is Prime" : "$num is not Prime";', "code1");
+echo isPrime($num) ? "$num is Prime" : "$num is not Prime";
+?&gt;</code></pre>
+    </div>
 
-    // 2. PHP Script to find Factorial
-    createCodeBox("2. Factorial Calculation", 'function factorial($num) {
+    <div class='code-box'>
+        <h3>2. Factorial Calculation</h3>
+        <button class='copy-btn' onclick='copyCode("code2")'>Copy</button>
+        <pre><code id='code2'>&lt;?php
+function factorial($num) {
     if ($num < 0) return "Invalid input";
     return $num == 0 ? 1 : $num * factorial($num - 1);
 }
 $num = 5;
-echo "Factorial of $num is " . factorial($num);', "code2");
+echo "Factorial of $num is " . factorial($num);
+?&gt;</code></pre>
+    </div>
 
-    // 3. PHP Script for Number Triangle
-    createCodeBox("3. Number Triangle", 'function numberTriangle($n) {
+    <div class='code-box'>
+        <h3>3. Number Triangle</h3>
+        <button class='copy-btn' onclick='copyCode("code3")'>Copy</button>
+        <pre><code id='code3'>&lt;?php
+function numberTriangle($n) {
     for ($i = 1; $i <= $n; $i++) {
         for ($j = 1; $j <= $i; $j++) {
             echo "$j ";
@@ -83,23 +86,38 @@ echo "Factorial of $num is " . factorial($num);', "code2");
         echo "<br>";
     }
 }
-numberTriangle(5);', "code3");
+numberTriangle(5);
+?&gt;</code></pre>
+    </div>
 
-    // 4. PHP Script for Grade System
-    createCodeBox("4. Grade System", 'function displayGrade($marks) {
+    <div class='code-box'>
+        <h3>4. Grade System</h3>
+        <button class='copy-btn' onclick='copyCode("code4")'>Copy</button>
+        <pre><code id='code4'>&lt;?php
+function displayGrade($marks) {
     if ($marks >= 70) echo "Distinction";
     elseif ($marks >= 60) echo "First Class";
     elseif ($marks >= 40) echo "Pass";
     else echo "Fail";
 }
-displayGrade(75);', "code4");
+displayGrade(75);
+?&gt;</code></pre>
+    </div>
 
-    // 5. PHP Script for String Functions
-    createCodeBox("5. String Functions", 'echo "String Length: " . strlen("Hello PHP");
-echo "<br>String Reverse: " . strrev("Hello PHP");', "code5");
+    <div class='code-box'>
+        <h3>5. String Functions</h3>
+        <button class='copy-btn' onclick='copyCode("code5")'>Copy</button>
+        <pre><code id='code5'>&lt;?php
+echo "String Length: " . strlen("Hello PHP");
+echo "<br>String Reverse: " . strrev("Hello PHP");
+?&gt;</code></pre>
+    </div>
 
-    // 6. PHP Script Demonstrating OOP in PHP
-    createCodeBox("6. OOP Concept", 'class Car {
+    <div class='code-box'>
+        <h3>6. OOP Concept</h3>
+        <button class='copy-btn' onclick='copyCode("code6")'>Copy</button>
+        <pre><code id='code6'>&lt;?php
+class Car {
     public $brand;
     function __construct($brand) {
         $this->brand = $brand;
@@ -109,9 +127,9 @@ echo "<br>String Reverse: " . strrev("Hello PHP");', "code5");
     }
 }
 $myCar = new Car("Toyota");
-echo $myCar->showBrand();', "code6");
-
-    ?>
+echo $myCar->showBrand();
+?&gt;</code></pre>
+    </div>
 
 </body>
 
