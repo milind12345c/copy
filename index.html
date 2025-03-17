@@ -4,133 +4,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Code Examples</title>
+    <title>Cloud Computing Practicals</title>
     <style>
-        .code-box {
-            border: 1px solid black;
-            padding: 10px;
-            margin: 5px;
-            position: relative;
-            background: #f4f4f4;
-            font-size: 18px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
 
-        .copy-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 5px 10px;
-            cursor: pointer;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
-        pre code {
-            font-size: 16px;
-            display: block;
-            white-space: pre-wrap;
-            word-wrap: break-word;
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        ol, ul {
+            line-height: 1.8;
         }
     </style>
-    <script>
-        function copyCode(id) {
-            var code = document.getElementById(id).innerText;
-            navigator.clipboard.writeText(code);
-        }
-    </script>
 </head>
 
 <body>
 
-    <div class='code-box'>
-        <h3>1. Prime Number Check</h3>
-        <button class='copy-btn' onclick='copyCode("code1")'>Copy</button>
-        <pre><code id='code1'>&lt;?php
-function isPrime($num) {
-    if ($num < 2) return false;
-    for ($i = 2; $i * $i <= $num; $i++) {
-        if ($num % $i == 0) return false;
-    }
-    return true;
-}
-$num = 17;
-echo isPrime($num) ? "$num is Prime" : "$num is not Prime";
-?&gt;</code></pre>
+    <!-- Identity Management Using Google Drive -->
+    <div class="container">
+        <h1>6. Identity Management Using Google Drive</h1>
+        <ol>
+            <li>Open a web browser and search for <b>Google Drive</b>.</li>
+            <li>Click on the <b>Google Drive link</b> and sign in with your Google account.</li>
+            <li>Once logged in, click on <b>"New"</b> and choose <b>Google Docs, Sheets, or Slides</b>.</li>
+            <li>Write anything in the document.</li>
+            <li>Click on the <b>"Share"</b> button at the top-right corner.</li>
+            <li>Enter the <b>email addresses</b> of people you want to share with.</li>
+            <li>Set permissions:
+                <ul>
+                    <li><b>Viewer</b> - Can only view.</li>
+                    <li><b>Commenter</b> - Can view and comment.</li>
+                    <li><b>Editor</b> - Can edit.</li>
+                </ul>
+            </li>
+            <li>Click <b>"Copy link"</b> to share with anyone.</li>
+            <li>Once done, the document is successfully shared. ✅</li>
+        </ol>
     </div>
 
-    <div class='code-box'>
-        <h3>2. Factorial Calculation</h3>
-        <button class='copy-btn' onclick='copyCode("code2")'>Copy</button>
-        <pre><code id='code2'>&lt;?php
-function factorial($num) {
-    if ($num < 0) return "Invalid input";
-    return $num == 0 ? 1 : $num * factorial($num - 1);
-}
-$num = 5;
-echo "Factorial of $num is " . factorial($num);
-?&gt;</code></pre>
+
+
+    <!-- Study of Cloud Computing and Architecture -->
+    <div class="container">
+        <h1>2. Study of Cloud Computing and Architecture</h1>
+        <h2>What is Cloud Computing?</h2>
+        <p>Cloud computing allows us to store, manage, and access data and applications over the internet.</p>
+
+        <h2>How Does It Work?</h2>
+        <ul>
+            <li>Files are stored on cloud servers instead of personal computers.</li>
+            <li>Accessible from anywhere with an internet connection.</li>
+        </ul>
+
+        <h2>Examples of Cloud Computing</h2>
+        <ul>
+            <li>Google Drive (store and share files).</li>
+            <li>YouTube (watch videos online).</li>
+            <li>Gmail (send and receive emails).</li>
+        </ul>
+
+        <h2>Cloud Architecture</h2>
+        <h3>1. Frontend (Client Side)</h3>
+        <p>Users interact with it (e.g., Google Drive website).</p>
+
+        <h3>2. Internet</h3>
+        <p>Connects users to cloud services.</p>
+
+        <h3>3. Backend (Cloud Infrastructure)</h3>
+        <ul>
+            <li><b>Applications</b> - Software in the cloud.</li>
+            <li><b>Storage</b> - Saves data (e.g., Google Drive).</li>
+            <li><b>Security</b> - Protects data from threats.</li>
+            <li><b>Management</b> - Maintains cloud performance.</li>
+        </ul>
+
+        <h2>Why Use Cloud Computing?</h2>
+        <ul>
+            <li><b>Saves Storage</b> - No need for large hard drives.</li>
+            <li><b>Access Anywhere</b> - Just need internet.</li>
+            <li><b>Cost-Effective</b> - No expensive hardware needed.</li>
+        </ul>
+
+        <p>Cloud computing makes storing and accessing data easy for everyone! 🚀</p>
     </div>
 
-    <div class='code-box'>
-        <h3>3. Number Triangle</h3>
-        <button class='copy-btn' onclick='copyCode("code3")'>Copy</button>
-        <pre><code id='code3'>&lt;?php
-function numberTriangle($n) {
-    for ($i = 1; $i <= $n; $i++) {
-        for ($j = 1; $j <= $i; $j++) {
-            echo "$j ";
+    <!-- Implementing Single Sign-On (SSO) -->
+    <div class="container">
+        <h1>9. Implementing Single Sign-On (SSO)</h1>
+        <ol>
+            <li><b>Enable Google Identity Platform:</b>
+                <ul>
+                    <li>Go to <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a>.</li>
+                    <li>Create a new project.</li>
+                    <li>Enable <b>Identity Platform</b> in <b>APIs & Services</b>.</li>
+                </ul>
+            </li>
+            <li><b>Create OAuth 2.0 Credentials:</b>
+                <ul>
+                    <li>Go to <b>APIs & Services</b> → <b>Credentials</b> → <b>Create OAuth Client ID</b>.</li>
+                    <li>Select <b>Web Application</b> and enter a Redirect URI (e.g., <code>http://localhost:3000/auth/callback</code>).</li>
+                    <li>Save the <b>Client ID</b> and <b>Client Secret</b>.</li>
+                </ul>
+            </li>
+            <li><b>Set Up Login Page:</b>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;script src="https://accounts.google.com/gsi/client" async defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Google SSO Login&lt;/h2&gt;
+    &lt;div id="g_id_onload"
+         data-client_id="YOUR_CLIENT_ID"
+         data-callback="handleCredentialResponse"&gt;
+    &lt;/div&gt;
+    &lt;div class="g_id_signin" data-type="standard"&gt;&lt;/div&gt;
+    &lt;script&gt;
+        function handleCredentialResponse(response) {
+            console.log("JWT Token: " + response.credential);
+            alert("Login Successful!");
         }
-        echo "<br>";
-    }
-}
-numberTriangle(5);
-?&gt;</code></pre>
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+                <p>🔹 <b>Replace "YOUR_CLIENT_ID"</b> with your OAuth Client ID.</p>
+            </li>
+            <li><b>Run & Test:</b>
+                <ul>
+                    <li>Open <code>index.html</code> in a browser.</li>
+                    <li>Click <b>Sign in with Google</b> and test SSO login.</li>
+                </ul>
+            </li>
+        </ol>
+        <h3>Conclusion:</h3>
+        <p>SSO allows users to log in once and access multiple apps securely using <b>OAuth 2.0 & OpenID Connect</b>.</p>
     </div>
 
-    <div class='code-box'>
-        <h3>4. Grade System</h3>
-        <button class='copy-btn' onclick='copyCode("code4")'>Copy</button>
-        <pre><code id='code4'>&lt;?php
-function displayGrade($marks) {
-    if ($marks >= 70) echo "Distinction";
-    elseif ($marks >= 60) echo "First Class";
-    elseif ($marks >= 40) echo "Pass";
-    else echo "Fail";
-}
-displayGrade(75);
-?&gt;</code></pre>
-    </div>
-
-    <div class='code-box'>
-        <h3>5. String Functions</h3>
-        <button class='copy-btn' onclick='copyCode("code5")'>Copy</button>
-        <pre><code id='code5'>&lt;?php
-echo "String Length: " . strlen("Hello PHP");
-echo "<br>String Reverse: " . strrev("Hello PHP");
-?&gt;</code></pre>
-    </div>
-
-    <div class='code-box'>
-        <h3>6. OOP Concept</h3>
-        <button class='copy-btn' onclick='copyCode("code6")'>Copy</button>
-        <pre><code id='code6'>&lt;?php
-class Car {
-    public $brand;
-    function __construct($brand) {
-        $this->brand = $brand;
-    }
-    function showBrand() {
-        return "Car brand is " . $this->brand;
-    }
-}
-$myCar = new Car("Toyota");
-echo $myCar->showBrand();
-?&gt;</code></pre>
-    </div>
+    <!-- Navigation Links -->
+    <div class="container"><a href="./5.HTML">5. Storage</a></div>
+    <div class="container"><a href="./1.HTML">1. Infrastructure as a Service</a></div>
+    <div class="container"><a href="./3.HTML">3. Installation and Configuration of Virtualization using KVM</a></div>
 
 </body>
-
 </html>
