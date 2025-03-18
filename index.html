@@ -6,91 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Cheat Sheet</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling for the button */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+            transform: scale(1.05);
+            box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>PHP Practical Cheat Sheet</h1>
+        <h1>Padhai kro Chutiyooo</h1>
 
-        <div class='code-box'>
-            <h3>1. Prime Number Check</h3>
-            <pre><code>&lt;?php
-function isPrime($num) {
-    if ($num < 2) return false;
-    for ($i = 2; $i * $i <= $num; $i++) {
-        if ($num % $i == 0) return false;
-    }
-    return true;
-}
-$num = 17;
-echo isPrime($num) ? "$num is Prime" : "$num is not Prime";
-?&gt;</code></pre>
+        <div class="code-box">
+            <a href="./php.pdf" class="btn">Download PHP Cheat Sheet</a>
         </div>
 
-        <div class='code-box'>
-            <h3>2. Factorial Calculation</h3>
-            <pre><code>&lt;?php
-function factorial($num) {
-    if ($num < 0) return "Invalid input";
-    return $num == 0 ? 1 : $num * factorial($num - 1);
-}
-$num = 5;
-echo "Factorial of $num is " . factorial($num);
-?&gt;</code></pre>
-        </div>
-
-        <div class='code-box'>
-            <h3>3. Number Triangle</h3>
-            <pre><code>&lt;?php
-function numberTriangle($n) {
-    for ($i = 1; $i <= $n; $i++) {
-        for ($j = 1; $j <= $i; $j++) {
-            echo "$j ";
-        }
-        echo "<br>";
-    }
-}
-numberTriangle(5);
-?&gt;</code></pre>
-        </div>
-
-        <div class='code-box'>
-            <h3>4. Grade System</h3>
-            <pre><code>&lt;?php
-function displayGrade($marks) {
-    if ($marks >= 70) echo "Distinction";
-    elseif ($marks >= 60) echo "First Class";
-    elseif ($marks >= 40) echo "Pass";
-    else echo "Fail";
-}
-displayGrade(75);
-?&gt;</code></pre>
-        </div>
-
-        <div class='code-box'>
-            <h3>5. String Functions</h3>
-            <pre><code>&lt;?php
-echo "String Length: " . strlen("Hello PHP");
-echo "<br>String Reverse: " . strrev("Hello PHP");
-?&gt;</code></pre>
-        </div>
-
-        <div class='code-box'>
-            <h3>6. OOP Concept</h3>
-            <pre><code>&lt;?php
-class Car {
-    public $brand;
-    function __construct($brand) {
-        $this->brand = $brand;
-    }
-    function showBrand() {
-        return "Car brand is " . $this->brand;
-    }
-}
-$myCar = new Car("Toyota");
-echo $myCar->showBrand();
-?&gt;</code></pre>
-        </div>
     </div>
 </body>
 
